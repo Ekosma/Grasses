@@ -1,0 +1,18 @@
+    
+<h1><%= current_user.username%>'s student <%=@student.name%>.</h1>
+<h2> Please complete the following below to edit <%=@student.name%>.</h2>
+<form  action="/students/<%=@student.id%>/edit" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <label for="name" >Student's Name:</label>
+  <input type="text" name="name" placeholder="student name" id="name" required="required" value=<%=@student.name%>>
+  <label for="birthday" >Student's Birthday:</label>
+  <input type="text" name="birthday" placeholder="student birthday" id="birthday" required="required" value=<%=@student.birthday%>><br>
+  <label for="favorite_color" >Student's favorite color:</label>
+  <input type="text" name="favorite_color" placeholder="favorite color" id="favorite_color" required="required" value=<%=@student.favorite_color%>>
+  <label for="favorite_food" >Student's favorite food:</label>
+  <input type="text" name="favorite_food" placeholder="favorite food" id="favorite_food" required="required" value=<%=@student.favorite_food%>><br><br>
+  <label for="student_comment" >Add your thoughts about the student:</label><br>
+  <textarea rows="4" cols="50" name="student_comment" placeholder="teacher thoughts" id="student_comment" required="required" value=<%=@student.student_comment%>></textarea><br>
+  <button type="submit" value="submit" > submit </button>
+<h4><a href="/index"> Main Class Page</a>
+<a href="/users/logout"> Logout </a></h4>

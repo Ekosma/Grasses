@@ -1,0 +1,13 @@
+<h1>Welcome to Grasses, <%= current_user.username%>!</h1>
+<p> Here is a list your current students for "<%=@period.name%>" class. Choose one to see more inforamtion.</p>
+<% @students.each do |student| %>
+  <a href="/students/student/<%=student.id%>"><%=student.name %></a>
+<% end %>
+<h2><a href='/period/<%=@period_id%>/add_student'> Add a student</h2>
+<h4><form action="/periods/<%=@period_id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
+<a href="/periods/<%=@period_id%>/edit">Edit</a>
+<a href="/index"> Main Class Page</a>
+  <a href="/users/logout"> Logout </a></h4>

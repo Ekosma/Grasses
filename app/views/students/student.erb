@@ -1,0 +1,19 @@
+        
+<h1>Welcome to Grasses, <%= current_user.username%>!</h1>
+<p> Here is a little more about <%=@student_name.name%>.</p>
+<% @stud_att.each do |student| %>
+  Birthday:<%= student.birthday%><br>
+  <br>
+  Favorite Color:<%= student.favorite_color%><br>
+  <br>
+  Favorite Food:<%= student.favorite_food%><br>
+  <br>
+  Notes:<%= student.student_comment%>
+<% end %>
+<h4><form action="/students/<%=@student_id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
+<a href="/students/<%=@student_id%>/edit">Edit</a>
+<a href="/index"> Main Class Page</a>
+<a href="/users/logout"> Logout </a></h4>

@@ -1,0 +1,18 @@
+    
+<h1><%= current_user.username%>'s Classes</h1>
+<h2> Please complete the following below to add a Student</h2>
+<form  action="/period/<%=@period_id%>/add_student" method="post">
+  <label for="name" >Student's Name:</label>
+  <input type="text" name="name" placeholder="student name" id="name" required="required">
+  <label for="birthday" >Student's Birthday:</label>
+  <input type="text" name="birthday" placeholder="student birthday" id="birthday" required="required"><br>
+  <label for="favorite_color" >Student's favorite color:</label>
+  <input type="text" name="favorite_color" placeholder="favorite color" id="favorite_color" required="required">
+  <label for="favorite_food" >Student's favorite food:</label>
+  <input type="text" name="favorite_food" placeholder="favorite food" id="favorite_food" required="required"><br><br>
+  <label for="student_comment" >Add your thoughts about the student:</label><br>
+  <textarea rows="4" cols="50" name="student_comment" placeholder="teacher thoughts" id="student_comment" required="required"></textarea><br>
+  <button type="submit" value="submit" > submit </button>
+</form>
+<h4><a href="/index"> Main Class Page</a>
+<a href="/users/logout"> Logout </a></h4>

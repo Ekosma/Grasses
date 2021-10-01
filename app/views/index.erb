@@ -1,0 +1,8 @@
+        
+<h1>Welcome to Grasses, <%= current_user.username%>!</h1>
+<p> Here is a list your current classes. Choose one to see more inforamtion.</p>
+<% @user_periods.each do |period| %>
+  <h3><a href="/periods/period/<%=period.id%>"><%=period.name %></a></h3>
+<% end %>
+  <h4><a href='/periods/create_period'> Create a class</a>
+  <a href="/users/logout"> Logout </a></h4>
