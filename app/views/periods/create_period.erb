@@ -1,0 +1,10 @@
+    
+<h1><%= current_user.username%>'s Classes</h1>
+<h2> Please complete the following below to create a class</h2>
+<form  action="/periods/create_period" method="post">
+  <label for="period" >Class:</label>
+  <input type="text" name="period" placeholder="period" id="period" required="required">
+  <button type="submit" value="submit" > submit </button>
+</form>
+<h4><a href="/index"> Main Class Page</a>
+<a href="/users/logout"> Logout </a></h4>

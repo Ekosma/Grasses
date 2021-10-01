@@ -1,0 +1,9 @@
+<h1><%= current_user.username%>'s Classes</h1>
+<h2> It does not appear that any classes have been created.</h2>
+<h3>Please create your class below.</h3>
+<form  action="/periods/create_period" method="post">
+  <label for="period" >Class:</label>
+  <input type="text" name="period" placeholder="period" id="period" required="required">
+  <button type="submit" value="submit" > submit </button>
+</form>
+<h4><a href="/users/logout"> Logout </a></h4>
