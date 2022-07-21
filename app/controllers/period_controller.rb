@@ -31,7 +31,7 @@ class PeriodsController < ApplicationController
         @students = []
         @period_id = params[:id] #gets period for href
         @period = Period.find_by("id = ?", params[:id])#gets period for .name
-        student_id = Student_Period.where("periods_id = ?", @period_id) #finds student associated with period
+        student_id = StudentPeriod.where("periods_id = ?", @period_id) #finds student associated with period
         student_id.each do |student|
             @students << Student.find_by(id: student.students_id)
         end

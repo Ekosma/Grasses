@@ -1,6 +1,6 @@
 class StudentController < ApplicationController
 
-    get '/students/student/:id' do
+    get '/students/:id' do
         redirect_if_not_logged_in
         @student_id = params[:id]
         @stud_att = []

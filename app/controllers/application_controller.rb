@@ -16,6 +16,10 @@ class ApplicationController < Sinatra::Base
       redirect to '/index'
     end
   end
+
+  get '/about' do
+    erb :about
+  end
   
   helpers do
     

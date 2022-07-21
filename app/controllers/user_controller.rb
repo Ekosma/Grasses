@@ -40,5 +40,5 @@ class UsersController < ApplicationController
     session.clear
     erb :'/users/logout'
   end
-  
+
 end
